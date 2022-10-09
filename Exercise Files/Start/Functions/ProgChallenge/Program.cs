@@ -10,9 +10,15 @@ namespace ProgChallenge2
             s = s.ToLower();
             string reverse = Reverse(s);
 
-            bool isPal = false;
-            if (s == reverse) {
+            bool isPal;
+            if (s == "") {
+                isPal = false;
+            }
+            else if (s == reverse) {
                 isPal = true;
+            }
+            else {
+                isPal = false;
             }
             return (isPal ? true : false, isPal ? s.Length : 0);
         }
